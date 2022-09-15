@@ -26,7 +26,7 @@
                             <a href=#accessoire>Accessoires</a>
                         </li>
                         <li>
-                            <a href=#accessoire>Emprunts</a>
+                            <a href=emprunts.php>Emprunts</a>
                         </li>
                     </ul>       
                 </nav>
@@ -36,10 +36,6 @@
                 </div>
             
 
-            <!-- Section à droite  -->
-            <section id="mes_reservations">
-                <?php include('gestion_emprunts.php') ?>
-            </section>
         </div>
 
     <?php include('footer.php') ?>

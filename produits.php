@@ -193,10 +193,19 @@
         echo "</div>";
 
         if(isset($_POST['valider'])){
-            $query = $pdo -> query("INSERT INTO emprunts(id_emprunts, id_membres, id_materiel, date_emprunt, date_rendu, statut) VALUES()"); 
-        }
+            $query = $pdo -> query("INSERT INTO emprunts(id_emprunts, id_membres, id_materiel, date_emprunt, date_rendu, statut) VALUES(:id_emprunts, :id_membres, :id_materiel, :date_emprunt, :date_rendu, :statut)"); 
+            $creation = $pdo->prepare($query); 
+            $creation->bindValue(':id_emprunt',$id_emprunt, PDO::PARAM_STR);
+            $creation->bindValue(':id_membres',$id_emprunt, PDO::PARAM_STR);
+            $creation->bindValue(':id_materiel',$id_emprunt, PDO::PARAM_STR);
+            $creation->bindValue(':date_emprunt',$id_emprunt, PDO::PARAM_STR);
+            $creation->bindValue(':date_rendu',$id_emprunt, PDO::PARAM_STR);
+            $creation->bindValue(':statut',$id_emprunt, PDO::PARAM_STR);
         
-    
+        
+        }   
+        
+        
     // fermeture de la connexion 
     $pdo = null;  
 ?>

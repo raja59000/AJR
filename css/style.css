@@ -1,5 +1,13 @@
 /*--------------------------- REGLAGE GENERAL --------------------------------*/
 
+
+
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +15,21 @@
 }
 body {
   width: 100%;
+}
+
+
+
+.fleche{
+  text-align: center;
+  margin-top: 550px;
+  margin-left: 150px;
+  font-size: 80px;
+}
+
+.fleche a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 /*Fichier menu.php, footer_index.php, barre en dessous banner
